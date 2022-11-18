@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
 // Import statements
-import Roll from './lib/lib/roll.js';
-import express from 'express';
-import minimist from 'minimist';
+import Roll from "./lib/lib/roll.js";
+import express from "express";
+import minimist from "minimist";
 
 // const declarations
 const app = express();
