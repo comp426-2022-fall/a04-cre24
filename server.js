@@ -44,3 +44,11 @@ app.use('/app/roll', (req, res, next) => {
     res.end(); 
 })
 
+app.use((req, res, next) => {
+    res.status(404).send("404 NOT FOUND");
+    res.end();
+})
+
+app.listen(port, (err) => {
+    console.log("Server port is " + port);
+})
