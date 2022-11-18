@@ -1,0 +1,26 @@
+{
+  "name": "node-dice",
+  "version": "1.0.0",
+  "description": "COMP 426 Fall 2022: Fall a03",
+  "main": "./lib/roll.js",
+  "scripts": {
+    "test": "nroll-dice --sides=10 --dice=2 --rolls=3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/comp426-2022-fall/a03-cre24.git"
+  },
+  "author": "@cre24",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/comp426-2022-fall/a03-cre24/issues"
+  },
+  "homepage": "https://github.com/comp426-2022-fall/a03-cre24#readme",
+  "bin": {
+    "roll-dice": "./bin/cli.js"
+  },
+  "dependencies": {
+    "minimist": "^1.2.7"
+  },
+  "type": "module"
+}
