@@ -16,22 +16,22 @@ app.get('/app', (req, res) => {
 })
 
 app.get('/app/roll', (req, res, next) => {
-    res.send(Roll(6,2,1));
+    res.send(roll(6,2,1));
     res.end();
 })
 
 app.get('/app/roll/:sides', (req, res, next) => {
-    res.send(Roll(parseInt(req.params.sides), 2, 1));
+    res.send(roll(parseInt(req.params.sides), 2, 1));
     res.end();
 })
 
 app.get('/app/roll/:sides/:dice', (req, res, next) => {
-    res.send(Roll(parseInt(req.params.sides), parseInt(req.params.dice), 1));
+    res.send(roll(parseInt(req.params.sides), parseInt(req.params.dice), 1));
     res.end();
 })
 
 app.use('/app/roll/:sides/:dice/:rolls', (req, res, next) => {
-    res.send(Roll(parseInt(req.params.sides), parseInt(req,params.dice), parseInt(req.params.rolls)));
+    res.send(roll(parseInt(req.params.sides), parseInt(req,params.dice), parseInt(req.params.rolls)));
     res.end();
 })
 
@@ -40,7 +40,7 @@ app.use('/app/roll', (req, res, next) => {
     var numSides = req.params.sides ? parseInt(req.params.sides) : 6;
     var numDice = req.params.dice ? parseInt(req.params.dice) : 2;
     var numRolled = req.params.rolls ? parseInt(req.params.rolls) : 1;
-    res.send(Roll(numSides,numDice,numRolled));
+    res.send(roll(numSides,numDice,numRolled));
     res.end(); 
 })
 
