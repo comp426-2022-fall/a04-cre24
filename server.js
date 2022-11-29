@@ -15,7 +15,7 @@ app.get('/app', (req, res) => {
     res.send("200 OK");
 })
 
-app.get('/app/roll', (res) => {
+app.get('/app/roll', (req, res, next) => {
     res.send(roll(6,2,1));
     res.end();
 })
